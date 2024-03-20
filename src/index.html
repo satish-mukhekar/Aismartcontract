@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Styling</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <script>
+        function selectAll(){
+            let cityCheck=document.getElementsByName("cityCheck");
+            let cityCheckLen=cityCheck.length;
+            for(var x=0;x<cityCheckLen;x++){
+                cityCheck[x].checked=true;
+            }
+        }
+        function deselectAll(){
+            let cityCheck=document.getElementsByName("cityCheck");
+            let cityCheckLen=cityCheck.length;
+            for(var x=0;x<cityCheckLen;x++){
+                cityCheck[x].checked=false;
+            }
+        }
+    </script>
+    
+    <input type="button" onclick="selectAll()" value="Select All">
+    <input type="button" onclick="deselectAll()" value="Deselect All">
+    
+    <br/><br/>
+    <label class="checkbox-wrapper">
+        Burnable
+        <input type="checkbox" name="cityCheck" class="tgl tgl-ios" value="Noida">
+        <label class="tgl-btn"></label>
+    </label>
+    <label class="checkbox-wrapper">
+        Pausable
+        <input type="checkbox" name="cityCheck" class="tgl tgl-ios" value="Mumbai">
+        <label class="tgl-btn"></label>
+    </label>
+    <label class="checkbox-wrapper">
+        Mintable
+        <input type="checkbox" name="cityCheck" class="tgl tgl-ios" value="Pune">
+        <label class="tgl-btn"></label>
+    </label>
+    <label class="checkbox-wrapper">
+        Permit
+        <input type="checkbox" name="cityCheck" class="tgl tgl-ios" value="Delhi">
+        <label class="tgl-btn"></label>
+    </label>
+</body>
+</html>
